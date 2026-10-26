@@ -44,6 +44,7 @@ public class GlobalExceptionHandler {
                 .badRequest()
                 .body(fieldErrors);
     }
+    
     @ExceptionHandler(ObjectOptimisticLockingFailureException.class)
     public ResponseEntity<Map<String, String>> handleOptimisticLocking(
             ObjectOptimisticLockingFailureException ex) {
